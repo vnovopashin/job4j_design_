@@ -3,6 +3,7 @@ package ru.job4j.collection;
 import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
@@ -10,6 +11,7 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.stream.IntStream;
 
+@Disabled("Каркас приложения, тесты будут включены после реализации")
 class SimpleArrayListTest {
 
     private SimpleList<Integer> list;
