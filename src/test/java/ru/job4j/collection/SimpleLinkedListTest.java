@@ -9,7 +9,6 @@ import java.util.Iterator;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-@Disabled("Тесты будут включены после реализации методов")
 class SimpleLinkedListTest {
 
     private SimpleLinked<Integer> list;
