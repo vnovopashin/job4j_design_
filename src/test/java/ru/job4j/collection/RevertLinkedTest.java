@@ -1,12 +1,10 @@
 package ru.job4j.collection;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Disabled("Тесты отключены, пока не реализованы методы")
 class RevertLinkedTest {
     private RevertLinked<Integer> linked;
 
