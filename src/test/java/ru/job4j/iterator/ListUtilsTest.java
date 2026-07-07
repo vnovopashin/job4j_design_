@@ -1,7 +1,6 @@
 package ru.job4j.iterator;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -11,7 +10,6 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-@Disabled("Тесты будут доступны после реализации методов")
 class ListUtilsTest {
 
     private List<Integer> input;
@@ -37,5 +35,35 @@ class ListUtilsTest {
     void whenAddAfter() {
         ListUtils.addAfter(input, 0, 2);
         assertThat(input).hasSize(3).containsSequence(1, 2, 3);
+    }
+
+    @Test
+    void whenAddAfterWithInvalidIndex() {
+        assertThatThrownBy(() -> ListUtils.addAfter(input, 3, 2))
+                .isInstanceOf(IndexOutOfBoundsException.class);
+    }
+
+    @Test
+    void whenRemoveIfLessTwo() {
+        ListUtils.removeIf(input, element -> element < 2);
+        assertThat(input).hasSize(1).containsSequence(3);
+    }
+
+    @Test
+    void whenReplaceIfOneThenFive() {
+        ListUtils.replaceIf(input, element -> element == 1, 5);
+        assertThat(input).hasSize(2).containsSequence(5, 3);
+    }
+
+    @Test
+    void whenRemoveAllThenEmpty() {
+        ListUtils.removeAll(input, List.of(1, 3));
+        assertThat(input).isEmpty();
+    }
+
+    @Test
+    void whenRemoveAllOneThenTree() {
+        ListUtils.removeAll(input, List.of(1));
+        assertThat(input).hasSize(1).containsSequence(3);
     }
 }
