@@ -1,11 +1,9 @@
 package ru.job4j.set;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Disabled("Тесты будут включены после реализации методов")
 class SimpleArraySetTest {
 
     @Test
@@ -39,5 +37,26 @@ class SimpleArraySetTest {
         assertThat(set.add(null)).isTrue();
         assertThat(set.contains(null)).isTrue();
         assertThat(set.add(null)).isFalse();
+    }
+
+    @Test
+    void whenContainsValueThenTrue() {
+        SimpleSet<Integer> set = new SimpleArraySet<>();
+        set.add(1);
+        assertThat(set.contains(1)).isTrue();
+    }
+
+    @Test
+    void whenNotContainsValueThenFalse() {
+        SimpleSet<Integer> set = new SimpleArraySet<>();
+        set.add(1);
+        assertThat(set.contains(2)).isFalse();
+    }
+
+    @Test
+    void whenContainsNullThenTrue() {
+        SimpleSet<Integer> set = new SimpleArraySet<>();
+        set.add(null);
+        assertThat(set.contains(null)).isTrue();
     }
 }
