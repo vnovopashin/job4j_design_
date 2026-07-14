@@ -27,7 +27,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(name, children, birthday);
     }
 
     @Override
@@ -59,6 +59,6 @@ public class User {
         int hashCode = user.hashCode();
         int hash = hashCode ^ (hashCode >>> 16);
         int bucket = hash & 15;
-        System.out.printf("User - %s\n hashCode - %s\n hash - %s\n bucket - %s\n", user, hashCode, hash, bucket);
+        System.out.printf("User - %s\n hashCode - %d\n hash - %d\n bucket - %d\n", user, hashCode, hash, bucket);
     }
 }
