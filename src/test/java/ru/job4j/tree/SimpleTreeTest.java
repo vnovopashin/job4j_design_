@@ -1,11 +1,9 @@
 package ru.job4j.tree;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Disabled("Будут включены после реализации методов в классе")
 public class SimpleTreeTest {
 
     @Test
