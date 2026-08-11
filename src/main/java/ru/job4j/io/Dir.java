@@ -5,7 +5,10 @@ import java.util.Objects;
 
 public class Dir {
     public static void main(String[] args) {
-        File file = new File("src/main/java/ru/job4j");
+        if (args.length == 0) {
+            throw  new IllegalArgumentException("Root folder is null. Usage  ROOT_FOLDER.");
+        }
+        File file = new File(args[0]);
         if (!file.exists()) {
             throw new IllegalArgumentException(String.format("Директория не существует: %s", file.getAbsoluteFile()));
         }
