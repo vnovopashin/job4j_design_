@@ -9,8 +9,9 @@ import java.util.function.Predicate;
 
 public class Search {
     public static void main(String[] args) throws IOException {
-        Path start = Paths.get(".");
-        search(start, path -> path.toFile().getName().endsWith(".js")).forEach(System.out::println);
+        validateInput(args);
+        Path start = Paths.get(args[0]);
+        search(start, path -> path.toFile().getName().endsWith(args[1])).forEach(System.out::println);
         search(start, path -> path.toFile().length() == 0).forEach(System.out::println);
     }
 
@@ -18,5 +19,15 @@ public class Search {
         SearchFiles searcher = new SearchFiles(condition);
         Files.walkFileTree(root, searcher);
         return searcher.getPaths();
+    }
+
+    public static void validateInput(String[] args) {
+        if (args.length != 2) {
+            throw new IllegalArgumentException("""
+                    The program must be run with parameters.
+                     The first parameter is the starting folder.\
+                     The second parameter is the file extension.
+                     Usage java -jar search.jar ROOT_FOLDER EXTENSION""");
+        }
     }
 }
