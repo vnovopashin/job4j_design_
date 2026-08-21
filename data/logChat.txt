@@ -1,0 +1,23 @@
+Привет
+how are you?
+Нормально, изучаю Java
+nice to meet you.
+Мне тоже
+where are you from?
+Я из Томска
+bye!
+стоп
+тест
+тесе
+тест
+продолжить
+bye!
+пока
+where are you from?
+стоп
+тест2
+продолжить
+I am bot, my name is r2d2.
+ок, классное имя
+nice to meet you.
+закончить
