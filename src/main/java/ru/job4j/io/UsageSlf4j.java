@@ -14,5 +14,16 @@ public class UsageSlf4j {
         LOG.info("info message");
         LOG.warn("warn message");
         LOG.error("error message");
+
+        byte b = 66;
+        short s = 1995;
+        char c = 'a';
+        int i = 5;
+        long l = 77L;
+        float f = 23f;
+        double d = 67;
+        boolean bool = true;
+
+        LOG.debug("Primitive types in Java: byte = {}, short = {}, char = {}, int = {}, long = {}, float = {}, double = {}, boolean = {}", b, s, c, i, l, f, d, bool);
     }
 }
