@@ -1,5 +1,8 @@
 package ru.job4j.io;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,7 +12,10 @@ import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
 public class EchoServer {
-    public static void main(String[] args) throws IOException {
+
+    private static final Logger LOG = LogManager.getLogger(EchoServer.class.getName());
+
+    public static void main(String[] args) {
         try (ServerSocket server = new ServerSocket(9001)) {
             while (!server.isClosed()) {
                 try (Socket socket = server.accept();
@@ -37,8 +43,12 @@ public class EchoServer {
                             + "Content-Length: " + response.length() + "\r\n"
                             + "\r\n" + response).getBytes(StandardCharsets.UTF_8));
                     output.flush();
+                } catch (IOException e) {
+                    LOG.error("Exception in log example", e);
                 }
             }
+        } catch (IOException e) {
+            LOG.error("Exception in log example", e);
         }
     }
 }
