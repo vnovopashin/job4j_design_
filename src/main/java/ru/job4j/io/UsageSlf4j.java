@@ -25,5 +25,6 @@ public class UsageSlf4j {
         boolean bool = true;
 
         LOG.debug("Primitive types in Java: byte = {}, short = {}, char = {}, int = {}, long = {}, float = {}, double = {}, boolean = {}", b, s, c, i, l, f, d, bool);
+        LOG.error("Primitive types in Java: byte = {}, short = {}, char = {}, int = {}, long = {}, float = {}, double = {}, boolean = {}", b, s, c, i, l, f, d, bool);
     }
 }

@@ -1,0 +1,2 @@
+2026-09-09 19:13:01,714 ERROR ru.job4j.io.UsageSlf4j:main:16 - error message
+2026-09-09 19:13:01,717 ERROR ru.job4j.io.UsageSlf4j:main:28 - Primitive types in Java: byte = 66, short = 1995, char = a, int = 5, long = 77, float = 23.0, double = 67.0, boolean = true
