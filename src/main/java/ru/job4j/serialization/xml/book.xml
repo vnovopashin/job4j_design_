@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+    <id>3d946579-4a83-4833-a4ed-5ac64e6a87f0</id>
+    <title>Java. Библиотека профессионала. Том 1. Основы</title>
+    <author>
+        <firstName>Кей</firstName>
+        <lastName>Хорстманн</lastName>
+    </author>
+    <price>2499.0</price>
+    <chapters>
+        <chapter>Введение в язык Java</chapter>
+        <chapter>Среда программирования на Java</chapter>
+        <chapter>Основные языковые конструкции Java</chapter>
+        <chapter>Объекты и классы</chapter>
+        <chapter>Наследование</chapter>
+        <chapter>Интерфейсы, лямбда-выражения и внутренние классы</chapter>
+        <chapter>Исключения, утверждения и протоколирование</chapter>
+        <chapter>Обобщённое программирование</chapter>
+        <chapter>Коллекции</chapter>
+        <chapter>Программирование графики</chapter>
+        <chapter>Компоненты пользовательского интерфейса в Swing</chapter>
+        <chapter>Параллелизм</chapter>
+        <chapter>Библиотека JavaFX</chapter>
+    </chapters>
+</book>
