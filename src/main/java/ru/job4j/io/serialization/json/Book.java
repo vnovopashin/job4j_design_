@@ -2,6 +2,7 @@ package ru.job4j.io.serialization.json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.json.JSONObject;
 
 import java.util.Arrays;
 import java.util.UUID;
@@ -19,6 +20,26 @@ public class Book {
         this.author = author;
         this.price = price;
         this.chapters = chapters;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String[] getChapters() {
+        return chapters;
     }
 
     @Override
@@ -87,5 +108,7 @@ public class Book {
 
         Book bookMod = gson.fromJson(bookJson, Book.class);
         System.out.println(bookMod);
+        System.out.println("============================");
+        System.out.println(new JSONObject(book));
     }
 }
