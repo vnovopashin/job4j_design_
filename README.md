@@ -5,3 +5,5 @@
 ![Image of junior](images/junior.png)
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=vnovopashin&show_icons=true&theme=gruvbox)
+
+#### Объединение зафиксированных изменений
